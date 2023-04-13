@@ -1,0 +1,262 @@
+:root {
+  --primary: #000000;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000000;
+  min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6e6969;
+}
+
+.navbar .navbar-nav a {
+  color: #000000;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #bbb9b9;
+}
+
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #bbb9b9;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #6e6969;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #bbb9b9;
+}
+
+/* Hero Section */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 65rem;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: #6e6969;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #918e8e;
+}
+
+.hero .content .p {
+  color: #6e6969;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: #000000;
+  background-color: #bbb9b9;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Tentang Section */
+.catalog,
+.contact,
+.tentang {
+  padding: 7rem 7% 1.4rem;
+}
+
+.catalog h2,
+.contact h2,
+.tentang h2 {
+  color: #6e6969;
+  text-align: left;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.catalog .row {
+  display: flex;
+}
+
+.tentang .row .tentang-img {
+  flex: 1 1 45rem;
+}
+
+.tentang .row .tentang-img img {
+  width: 100%;
+}
+
+.tentang .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.tentang .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tentang .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Catalog Section */
+.catalog h2 {
+  margin-bottom: 1rem;
+}
+
+.catalog p {
+  max-width: 30rem;
+  line-height: 1.6;
+}
+
+.catalog .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.menu.row .catalog-card {
+  text-align: center;
+}
+
+.catalog .row .catalog-card img {
+  justify-content: center;
+  border-radius: 50%;
+  width: 80%;
+}
+
+.catalog .row .catalog-card .catalog-card-title {
+  margin-top: 1rem auto;
+  text-align: center;
+}
+
+.catalog .row .catalog-card .catalog-card-price {
+  margin-top: 0.5rem auto 0.5rem;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.contact p {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+}
+
+.navbar .navbar-nav.active {
+  right: 0;
+}
+
+.navbar .nav-nav a {
+  color: #ffffff;
+  display: block;
+  margin: 1.5rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.2);
+}
+
+.pricelist .row {
+  flex-wrap: wrap;
+}
+
+/* Mobile Phone */
+@media (max-width: 460px) {
+  html {
+    font-size: 55%;
+  }
+  .pricelist .row {
+    flex-wrap: wrap;
+  }
+}
